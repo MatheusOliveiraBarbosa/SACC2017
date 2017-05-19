@@ -10,28 +10,50 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_title_view"
-        android:text="@string/title_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12pt"
-        android:textStyle="bold"
-        android:gravity="center"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_descriptive_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="10pt"
-        android:gravity="center"
-        android:text="@string/descriptive_text"/>
+            <TextView
+                android:id="@+id/tv_title_view"
+                android:text="@string/title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12pt"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:gravity="center"/>
 
-    <ImageView
-        android:id="@+id/iv_sacc_2017"
-        android:src="@drawable/sacc_2017"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_descriptive_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/text_color"
+                android:gravity="center_vertical|left"
+                android:text="@string/descriptive_text"/>
 
+            <ImageView
+                android:id="@+id/iv_sacc_2017"
+                android:src="@drawable/sacc_2017"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/bt_prototype_programation"
+                android:text="@string/botton_programation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="changeActivity"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
