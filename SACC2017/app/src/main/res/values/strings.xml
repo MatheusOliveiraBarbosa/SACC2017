@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">SACC2017</string>
+    <string name="app_name">SACC UFCG</string>
+
+    <!-- Main Activity -->
+    <string name="title">Seja Bem-vindo ao V SACC UFCG</string>
+
+    <!-- Values on BottomNavigationBar-->
+    <string name="opt1_VSACC">V SACC</string>
+    <string name="opt2_PROGA">Programação</string>
+    <string name="opt3_APOIO">Apoio</string>
+
 </resources>
