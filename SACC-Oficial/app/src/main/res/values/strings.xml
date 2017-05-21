@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">SACCUFCG2017</string>
-
-    <!-- Descriptive text about SACC-->
-    <string name="title_text">SACC - UFCG 2017</string>
-    <string name="descriptive_text">A Semana Acadêmica é um momento de troca de conhecimentos e, além disso, de consolidação da cultura do DSC. O evento conta com palestras, mesas redondas, competições, minicursos e muita integração entre estudantes, professores e colaboradores.</string>
-
-
-</resources>
