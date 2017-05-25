@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_favorites"
+        android:id="@+id/action_sacc"
         android:enabled="true"
         android:icon="@mipmap/ic_computer_black_24dp"
         android:title="@string/opt1_VSACC"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_schedules"
+        android:id="@+id/action_programacao"
         android:enabled="true"
         android:icon="@mipmap/ic_today_black_24dp"
         android:title="@string/opt2_PROGA"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_music"
+        android:id="@+id/action_apoio"
         android:enabled="true"
         android:icon="@mipmap/ic_people_outline_black_24dp"
         android:title="@string/opt3_APOIO"

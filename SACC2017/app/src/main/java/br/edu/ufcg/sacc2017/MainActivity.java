@@ -1,10 +1,17 @@
 package br.edu.ufcg.sacc2017;
 
+
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import br.edu.ufcg.sacc2017.fragments.FragmentApoio;
+import br.edu.ufcg.sacc2017.fragments.FragmentProgramacao;
+import br.edu.ufcg.sacc2017.fragments.FragmentSACC;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,17 +27,28 @@ public class MainActivity extends AppCompatActivity {
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        Fragment selectedFragment = null;
                         switch (item.getItemId()) {
-                            case R.id.action_favorites:
-
-                            case R.id.action_schedules:
-
-                            case R.id.action_music:
-
+                            case R.id.action_sacc:
+                                selectedFragment = FragmentSACC.newInstance();
+                                break;
+                            case R.id.action_programacao:
+                                selectedFragment = FragmentProgramacao.newInstance();
+                                break;
+                            case R.id.action_apoio:
+                                selectedFragment = FragmentApoio.newInstance();
+                                break;
                         }
+                        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.frame_layout, selectedFragment);
+                        transaction.commit();
                         return true;
                     }
                 });
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout, FragmentSACC.newInstance());
+        transaction.commit();
 
     }
 }
