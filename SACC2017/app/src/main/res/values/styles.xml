@@ -7,5 +7,23 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    
+    <style name="standard_text">
+        <item name="android:paddingRight">3pt</item>
+        <item name="android:paddingLeft">3pt</item>
+        <item name="android:paddingTop">5pt</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="standard_title">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:paddingTop">5pt</item>
+        <item name="android:paddingRight">3pt</item>
+        <item name="android:paddingLeft">3pt</item>
+        <item name="android:textSize">14pt</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
 
 </resources>
