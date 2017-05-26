@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TabHost;
 
 import br.edu.ufcg.sacc2017.fragments.FragmentApoio;
 import br.edu.ufcg.sacc2017.fragments.FragmentProgramacao;
@@ -23,11 +25,16 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.bottom_navigation);
 
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout, FragmentSACC.newInstance());
+        transaction.commit();
+
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         Fragment selectedFragment = null;
+
                         switch (item.getItemId()) {
                             case R.id.action_sacc:
                                 selectedFragment = FragmentSACC.newInstance();
@@ -46,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout, FragmentSACC.newInstance());
-        transaction.commit();
-
     }
+
+
 }
