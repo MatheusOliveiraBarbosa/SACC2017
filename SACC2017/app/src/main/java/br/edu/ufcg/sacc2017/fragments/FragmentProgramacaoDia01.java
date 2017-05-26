@@ -20,6 +20,7 @@ public class FragmentProgramacaoDia01 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_programacao_dia01,container,false);
+
         return  rootView;
     }
 
