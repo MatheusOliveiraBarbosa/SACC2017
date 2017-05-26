@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="br.edu.ufcg.sacc2017.fragments.FragmentSACC">
 
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/ufcg_land">
 
     <ImageView
         android:id="@+id/iv_computacao_logo"
@@ -31,6 +42,14 @@
         android:text="@string/subtitle"
         />
 
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
     <TextView
         android:id="@+id/tv_description"
         android:layout_width="match_parent"
@@ -52,6 +71,8 @@
         style="@style/standard_text"
         android:textStyle="bold"/>
 
+    </LinearLayout>
 
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
