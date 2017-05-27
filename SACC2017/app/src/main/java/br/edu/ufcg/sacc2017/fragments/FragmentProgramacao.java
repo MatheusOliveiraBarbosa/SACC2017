@@ -32,8 +32,6 @@ public class FragmentProgramacao extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolBar);
-
     }
 
     @Override
@@ -49,6 +47,7 @@ public class FragmentProgramacao extends Fragment {
 
         return tabHostProgramacao;
     }
+
 
     @Override
     public void onDestroyView() {

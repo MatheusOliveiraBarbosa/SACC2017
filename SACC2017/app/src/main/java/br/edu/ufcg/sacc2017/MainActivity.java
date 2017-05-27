@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TabHost;
@@ -26,6 +27,8 @@ public class MainActivity extends FragmentActivity {
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.bottom_navigation);
 
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar);
+
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, FragmentSACC.newInstance());
         transaction.commit();
@@ -39,12 +42,15 @@ public class MainActivity extends FragmentActivity {
                         switch (item.getItemId()) {
                             case R.id.action_sacc:
                                 selectedFragment = FragmentSACC.newInstance();
+                                toolbar.setVisibility(View.VISIBLE);
                                 break;
                             case R.id.action_programacao:
                                 selectedFragment = FragmentProgramacao.newInstance();
+                                toolbar.setVisibility(View.GONE);
                                 break;
                             case R.id.action_apoio:
                                 selectedFragment = FragmentApoio.newInstance();
+                                toolbar.setVisibility(View.VISIBLE);
                                 break;
                         }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
