@@ -1,6 +1,8 @@
 package br.edu.ufcg.sacc2017.fragments;
 
 
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -28,6 +31,16 @@ public class FragmentApoio extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG = "FragmentApoio";
 
+    private String[] listName = {"UFCG", "TFG", "Red Hat", "GuardiansDSC", "PET Computação", "SPLAB"};
+    private String[] listDescription = {"Universidade Federal de Campina Grande",
+    "A TFG é a maior desenvolvedora de games mobile da América Latina.",
+    "A Red Hat é o principal fornecedor mundial de soluções de software de open source.",
+    "Adicionar Descrição GuardiansDSC",
+    "Adicionar Descrição PET Computação",
+    "Laboratório de Práticas de Software (SPLab) tem como missão promover o desenvolvimento do estado-da-arte na teoria e prática da Engenharia de Software."};
+
+    private int[] listDrawable= {(R.drawable.ufcg), (R.drawable.tfg), (R.drawable.redhat), (R.drawable.guardians), (R.drawable.pet), (R.drawable.splab) };
+
     public static FragmentApoio newInstance() {
         FragmentApoio fragment = new FragmentApoio();
         return fragment;
@@ -42,7 +55,6 @@ public class FragmentApoio extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-//        mRecyclerView = (RecyclerView) getActivity().findViewById(R.id.reclycer_view);
         mRecyclerView = new RecyclerView(getActivity());
         mRecyclerView.findViewById(R.id.reclycer_view);
         mRecyclerView.setHasFixedSize(true);
@@ -69,9 +81,9 @@ public class FragmentApoio extends Fragment {
 
     private ArrayList<Apoio> getDataSet() {
         ArrayList results = new ArrayList<Apoio>();
-        for (int index = 0; index < 20; index++) {
-            Apoio obj = new Apoio("Some Primary Text " + index,
-                    "Secondary " + index);
+        for (int index = 0; index < listName.length; index++) {
+            Apoio obj = new Apoio(listName[index],
+                    listDescription[index]);
             results.add(index, obj);
         }
         return results;

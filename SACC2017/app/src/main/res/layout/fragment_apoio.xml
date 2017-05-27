@@ -5,18 +5,10 @@
     android:layout_height="match_parent"
     tools:context="br.edu.ufcg.sacc2017.fragments.FragmentApoio">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Fragment 3"
-        android:textSize="30sp"/>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/reclycer_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"/>
-
 
 </RelativeLayout>
