@@ -37,7 +37,7 @@ public class FragmentApoio extends Fragment {
     "A Red Hat é o principal fornecedor mundial de soluções de software de open source.",
     "Adicionar Descrição GuardiansDSC",
     "Adicionar Descrição PET Computação",
-    "Laboratório de Práticas de Software (SPLab) tem como missão promover o desenvolvimento do estado-da-arte na teoria e prática da Engenharia de Software."};
+    "Tem como missão promover o desenvolvimento do estado-da-arte na teoria e prática da Engenharia de Software."};
 
     private int[] listDrawable= {(R.drawable.ufcg), (R.drawable.tfg), (R.drawable.redhat), (R.drawable.guardians), (R.drawable.pet), (R.drawable.splab) };
 

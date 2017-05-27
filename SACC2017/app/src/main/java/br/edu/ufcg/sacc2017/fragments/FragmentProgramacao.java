@@ -41,9 +41,9 @@ public class FragmentProgramacao extends Fragment {
         tabHostProgramacao = new FragmentTabHost(getActivity());
         tabHostProgramacao.setup(getActivity(), getChildFragmentManager(), R.id.rl_programacao_container);
 
-        tabHostProgramacao.addTab(tabHostProgramacao.newTabSpec("fragment_programacao_dia01").setIndicator("Dia 1"), FragmentProgramacaoDia01.class, null);
-        tabHostProgramacao.addTab(tabHostProgramacao.newTabSpec("fragment_programacao_dia02").setIndicator("Dia 2"), FragmentProgramacaoDia02.class, null);
-        tabHostProgramacao.addTab(tabHostProgramacao.newTabSpec("fragment_programacao_dia03").setIndicator("Dia 3"), FragmentProgramacaoDia03.class, null);
+        tabHostProgramacao.addTab(tabHostProgramacao.newTabSpec("fragment_programacao_dia01").setIndicator("Dia 31/05"), FragmentProgramacaoDia01.class, null);
+        tabHostProgramacao.addTab(tabHostProgramacao.newTabSpec("fragment_programacao_dia02").setIndicator("Dia 01/06"), FragmentProgramacaoDia02.class, null);
+        tabHostProgramacao.addTab(tabHostProgramacao.newTabSpec("fragment_programacao_dia03").setIndicator("Dia 02/06"), FragmentProgramacaoDia03.class, null);
 
         return tabHostProgramacao;
     }
