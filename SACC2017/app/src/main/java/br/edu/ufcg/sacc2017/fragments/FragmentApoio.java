@@ -33,18 +33,6 @@ public class FragmentApoio extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG = "FragmentApoio";
 
-    private String[] listName = {"UFCG", "TFG", "Red Hat", "GuardiansDSC", "PET Computação", "SPLAB"};
-    private String[] listDescription = {"Universidade Federal de Campina Grande",
-    "A TFG é a maior desenvolvedora de games mobile da América Latina.",
-    "A Red Hat é o principal fornecedor mundial de soluções de software de open source.",
-    "Adicionar Descrição GuardiansDSC",
-    "Adicionar Descrição PET Computação",
-    "Tem como missão promover o desenvolvimento do estado-da-arte na teoria e prática da Engenharia de Software."};
-
-    private int[] listDrawable= {(R.drawable.ufcg), (R.drawable.tfg), (R.drawable.redhat), (R.drawable.guardians), (R.drawable.pet), (R.drawable.splab) };
-
-
-
     public static FragmentApoio newInstance() {
         FragmentApoio fragment = new FragmentApoio();
         return fragment;
