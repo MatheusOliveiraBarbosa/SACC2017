@@ -6,7 +6,17 @@
     <string name="subtitle">Semana Acadêmica de Ciência da Computação da Universidade Federal de Campina Grande</string>
     <string name="about_us">Um pouco sobre a SACC</string>
     <string name="about_us_description">A Semana Acadêmica é um momento de troca de conhecimentos e, além disso, de consolidação da cultura do DSC. O evento conta com palestras, mesas redondas, competições, minicursos e muita integração entre estudantes, professores e colaboradores.</string>
-    <string name="date">Data: 31 de Maio a 02 de Junho de 2017 </string>
+    <string name="date">31 de Maio à 02 de Junho/2017 </string>
+
+    <!-- endereco -->
+    <string name="ufcg">Universidade Federal de Campina Grande</string>
+    <string name="street">Rua Aprígio Veloso, 882</string>
+    <string name="neighborhood">Bairro Universitário</string>
+    <string name="city">Campina Grande-PB</string>
+    <string name="location">Bloco CN - Primeiro andar, sala 107.</string>
+
+    <string name="phone">(83) 2101-1122 (Ramal: 2009)</string>
+    <string name="mail">saccufcg@gmail.com </string>
 
     <!-- Values on BottomNavigationBar-->
     <string name="opt1_VSACC">V SACC</string>
