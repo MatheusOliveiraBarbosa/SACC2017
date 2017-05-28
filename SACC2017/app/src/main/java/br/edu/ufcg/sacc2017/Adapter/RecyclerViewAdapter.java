@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017.Adapter;
+package br.edu.ufcg.sacc2017.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;

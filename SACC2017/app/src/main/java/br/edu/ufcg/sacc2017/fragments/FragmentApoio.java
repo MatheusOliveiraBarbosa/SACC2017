@@ -1,24 +1,28 @@
 package br.edu.ufcg.sacc2017.fragments;
 
 
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
-import br.edu.ufcg.sacc2017.Adapter.RecyclerViewAdapter;
+import br.edu.ufcg.sacc2017.adapter.ApoioRecyclerAdapter;
+import br.edu.ufcg.sacc2017.adapter.RecyclerViewAdapter;
 import br.edu.ufcg.sacc2017.R;
-import br.edu.ufcg.sacc2017.models.Apoio;
+import br.edu.ufcg.sacc2017.model.Apoio;
+import br.edu.ufcg.sacc2017.util.JSONRawReader;
 
 /**
  * Created by mathe on 25/05/2017.
@@ -41,6 +45,8 @@ public class FragmentApoio extends Fragment {
 
     private int[] listDrawable= {(R.drawable.ufcg), (R.drawable.tfg), (R.drawable.redhat), (R.drawable.guardians), (R.drawable.pet), (R.drawable.splab) };
 
+
+
     public static FragmentApoio newInstance() {
         FragmentApoio fragment = new FragmentApoio();
         return fragment;
@@ -60,7 +66,7 @@ public class FragmentApoio extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new RecyclerViewAdapter(getDataSet());
+        mAdapter = new ApoioRecyclerAdapter(getDataSet());
         mRecyclerView.setAdapter(mAdapter);
 
         return mRecyclerView;
@@ -69,23 +75,43 @@ public class FragmentApoio extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((RecyclerViewAdapter) mAdapter).setOnItemClickListener(new RecyclerViewAdapter
-                .MyClickListener() {
-            @Override
-            public void onItemClick(int position, View v) {
-                Log.i(LOG_TAG, " Clicked on Item " + position);
+    }
+
+    private List<Apoio> getDataSet() {
+
+        JSONRawReader reader = new JSONRawReader(getActivity());
+
+        List<Apoio> apoios = new ArrayList<>();
+
+        try {
+            JSONArray dados = reader.getJSONArrayFromRaw(R.raw.apoio);
+            Log.i("Apoio", dados.toString());
+
+            if (dados != null) {
+                int len = dados.length();
+                for (int i=0;i<len;i++){
+
+                    Apoio apoio = new Apoio();
+
+                    apoio.setDescription((String) dados.getJSONObject(i).get("descricao"));
+                    apoio.setTitle((String) dados.getJSONObject(i).get("sigla"));
+                    apoio.setSite((String) dados.getJSONObject(i).get("site"));
+                    apoio.setType((int) dados.getJSONObject(i).get("tipo"));
+                    apoio.setLogo((String) dados.getJSONObject(i).get("logo"));
+
+                    apoios.add(apoio);
+                }
             }
-        });
 
-    }
 
-    private ArrayList<Apoio> getDataSet() {
-        ArrayList results = new ArrayList<Apoio>();
-        for (int index = 0; index < listName.length; index++) {
-            Apoio obj = new Apoio(listName[index],
-                    listDescription[index]);
-            results.add(index, obj);
+            } catch (IOException e) {
+            Log.e("APOIO", e.getMessage());
+        } catch (JSONException e) {
+            Log.e("APOIO", e.getMessage());
         }
-        return results;
+
+        return apoios;
     }
+
+
 }

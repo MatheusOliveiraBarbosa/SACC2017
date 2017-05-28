@@ -5,14 +5,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import br.edu.ufcg.sacc2017.Adapter.RecyclerViewAdapter;
+import br.edu.ufcg.sacc2017.adapter.RecyclerViewAdapter;
 import br.edu.ufcg.sacc2017.R;
 import br.edu.ufcg.sacc2017.models.Apoio;
 

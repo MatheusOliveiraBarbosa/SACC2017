@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import br.edu.ufcg.sacc2017.Adapter.RecyclerViewAdapter;
+import br.edu.ufcg.sacc2017.adapter.RecyclerViewAdapter;
 import br.edu.ufcg.sacc2017.R;
 import br.edu.ufcg.sacc2017.models.Apoio;
 
