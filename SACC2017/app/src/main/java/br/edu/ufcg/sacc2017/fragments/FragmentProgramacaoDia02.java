@@ -26,15 +26,28 @@ public class FragmentProgramacaoDia02 extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG_DIA2 = "FragmentProgramacaoDia02";
 
-    private String[] title = {"Palestra: O Negócio da Vida", "Palestra: Sistemas para a Saúde",
-    "Coffee Break", "Campus APPs", "----","Oficina de Entrevistas", "Minicurso de ReactJS",
-            "Mini Maratona", "----", "Copa SACC de Robocode", "Minicurso de ASP.NET"};
+    private String[] title = {"Palestra: O Negócio da Vida",
+            "Palestra: Sistemas para a Saúde",
+            "Coffee Break",
+            "Campus APPs",
+            "Pausa Para Almoço",
+            "Oficina de Entrevistas",
+            "Minicurso de ReactJS",
+            "Mini Maratona",
+            "----",
+            "Copa SACC de Robocode",
+            "Minicurso de ASP.NET"};
 
-    private String[] description = {"8:30 \nLocal: Centro de Extensão", "8:30 \nLocal: Centro de Extensão",
-            "10:00 \nLocal: Centro de Extensão", "10:15 \nLocal: Centro de Extensão",
-            "12:00 \nLocal: Tirando uma soneca que já já tem mais", "14:00 \nLocal: a ser definido",
-            "14:00 \nLocal: LCC1 - Reenge (Bloco CB)", "14:00 \nLocal: aguardando informação",
-            "16:00 \nLocal: Fui comprar pipoca", "16:15 \nLocal: aguardando informação",
+    private String[] description = {"8:30 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "8:30 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "10:00 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "10:15 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "12:00 \nLocal: Tirando uma soneca que já já tem mais",
+            "14:00 \nLocal: a ser definido",
+            "14:00 \nLocal: LCC1 - Reenge (Bloco CB)",
+            "14:00 \nLocal: aguardando informação",
+            "16:00 \nLocal: Fui comprar pipoca",
+            "16:15 \nLocal: aguardando informação",
             "18:00 \nLocal: REENGE - 10 (Bloco CB)"};
 
 

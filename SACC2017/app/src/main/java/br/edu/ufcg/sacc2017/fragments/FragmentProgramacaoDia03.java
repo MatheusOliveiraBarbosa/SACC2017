@@ -26,15 +26,27 @@ public class FragmentProgramacaoDia03 extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG_DIA3 = "FragmentProgramacaoDia03";
 
-    private String[] title = {"Palestra: Red Hat e OpenSource", "Coffee Break",
-    "Mesa Redonda", "3MT", "----", "Palestra: Trabalho Remoto", "Palestra: Uma Odisséia no Espaço.",
-    "----", "Encerramento e Premiações", "Obrigado Por Participar"};
+    private String[] title = {"Palestra: Red Hat e OpenSource",
+            "Coffee Break",
+            "Mesa Redonda",
+            "3MT",
+            "Pausa Para Almoço",
+            "Palestra: Trabalho Remoto",
+            "Palestra: Uma Odisséia no Espaço.",
+            "----",
+            "Encerramento e Premiações",
+            "Obrigado Por Participar"};
 
-    private String[] description = {"8:30 \nLocal: Centro de Extensão",
-            "10:00 \nLocal: Centro de Extensão", "10:15 \nLocal: aguardando confirmação",
-            "10:15 \nLocal: aguardando confirmação", "Tirando aquela velha soneca", "14:00 \nLocal: aguardando confirmação",
-            "14:00 \nLocal: aguardando confirmação", "16:00 \nAnsioso para receber minha premiação",
-            "16:15 \nLocal: aguardando confirmação", "18:00 \nVoltem Sempre :)"};
+    private String[] description = {"8:30 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "10:00 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "10:15 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "10:15 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "Tirando aquela velha soneca",
+            "14:00 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "14:00 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "16:00 \nAnsioso para receber minha premiação",
+            "16:15 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "18:00 \nVoltem Sempre :)"};
 
     @Nullable
     @Override

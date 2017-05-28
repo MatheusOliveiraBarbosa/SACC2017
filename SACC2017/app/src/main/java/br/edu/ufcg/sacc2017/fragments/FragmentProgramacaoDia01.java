@@ -26,16 +26,27 @@ public class FragmentProgramacaoDia01 extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG1 = "FragmentProgramacaoDia01";
 
-    private String[] title = {"Abertura",  "Palestra: Combate à Corrupção",
-    "Coffee Break", "TFG, Como fazer o melhor jogo do mundo?",
-    "----", "Minicurso de API Rest com NodeJS", "Minicurso Latex",
-    "----", "Copa SACC de Robocode", "Capture The Flag"};
+    private String[] title = {"Abertura",
+            "Palestra: Combate à Corrupção",
+            "Coffee Break",
+            "TFG, Como fazer o melhor jogo do mundo?",
+            "Pausa Para Almoço",
+            "Minicurso de API Rest com NodeJS",
+            "Minicurso Latex",
+            "----",
+            "Copa SACC de Robocode",
+            "Capture The Flag"};
 
-    private String[] description={"8:30 \nLocal: Centro de Extensão","8:30 \nLocal: Centro de Extensão",
-        "10:00 \nLocal: Centro de Extensão", "10:15 \nLocal: Centro de Extensão",
-        "12:00 \nLocal: Tirando aquela soneca", "14:00 \nLocal: LCC1 - Reenge (Bloco CB)",
-        "14:00 \nLocal: LCC2 (Bloco CN)", "16:00 \nLocal: Fui comprar a corneta para o Robocode",
-        "16:15 \nLocal: esperando confirmação", "18:00 \nLocal: esperando confirmação"};
+    private String[] description={"8:30 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "8:30 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "10:00 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "10:15 \nLocal: Centro de Extensão José Farias da Nóbrega",
+            "12:00 \nLocal: Tirando aquela soneca",
+            "14:00 \nLocal: LCC1 - Reenge (Bloco CB)",
+            "14:00 \nLocal: LCC2 (Bloco CN)",
+            "16:00 \nLocal: Fui comprar a corneta para o Robocode",
+            "16:15 \nLocal: esperando confirmação",
+            "18:00 \nLocal: esperando confirmação"};
 
 
     @Nullable
