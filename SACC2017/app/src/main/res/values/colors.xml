@@ -14,5 +14,6 @@
     <color name="white">#ffffff</color>
     <color name="white_trans">#99FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="grey">#BDBDBD</color>
 
 </resources>

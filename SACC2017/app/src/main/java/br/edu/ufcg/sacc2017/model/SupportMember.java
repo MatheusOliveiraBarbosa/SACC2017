@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by WitaloCarlos on 27/05/2017.
  */
 
-public class Apoio implements Parcelable {
+public class SupportMember implements Parcelable {
 
     private String description;
     private String title;
@@ -15,10 +15,10 @@ public class Apoio implements Parcelable {
     private int type;
     private String logo;
 
-    public Apoio() {
+    public SupportMember() {
     }
 
-    protected Apoio(Parcel in) {
+    protected SupportMember(Parcel in) {
         description = in.readString();
         title = in.readString();
         site = in.readString();
@@ -40,15 +40,15 @@ public class Apoio implements Parcelable {
         return 0;
     }
 
-    public static final Creator<Apoio> CREATOR = new Creator<Apoio>() {
+    public static final Creator<SupportMember> CREATOR = new Creator<SupportMember>() {
         @Override
-        public Apoio createFromParcel(Parcel in) {
-            return new Apoio(in);
+        public SupportMember createFromParcel(Parcel in) {
+            return new SupportMember(in);
         }
 
         @Override
-        public Apoio[] newArray(int size) {
-            return new Apoio[size];
+        public SupportMember[] newArray(int size) {
+            return new SupportMember[size];
         }
     };
 
