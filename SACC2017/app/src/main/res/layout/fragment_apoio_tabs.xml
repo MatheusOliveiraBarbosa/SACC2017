@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rl_apoio_container"
-    tools:context="br.edu.ufcg.sacc2017.fragments.FragmentProgramacao">
+    android:background="@color/cardview_shadow_start_color"
+    tools:context="br.edu.ufcg.sacc2017.fragments.FragmentApoioTabs">
 
     <TabWidget
         android:id="@android:id/tabs"

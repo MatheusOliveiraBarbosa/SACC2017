@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import br.edu.ufcg.sacc2017.R;
-import br.edu.ufcg.sacc2017.model.Apoio;
+import br.edu.ufcg.sacc2017.model.SupportMember;
 import br.edu.ufcg.sacc2017.util.Base64Parser;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -23,15 +23,15 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by easyo on 27/05/2017.
  */
 
-public class ApoioRecyclerAdapter extends RecyclerView.Adapter<ApoioRecyclerAdapter.ViewHolder> {
+public class SupportRecyclerAdapter extends RecyclerView.Adapter<SupportRecyclerAdapter.ViewHolder> {
 
-    private List<Apoio> mApoioset;
+    private List<SupportMember> mSupportMembers;
     private static RecyclerViewAdapter.MyClickListener myClickListener;
 
     ViewHolder mViewHolder;
 
-    public ApoioRecyclerAdapter(List<Apoio> apoioSet) {
-        this.mApoioset = apoioSet;
+    public SupportRecyclerAdapter(List<SupportMember> supportMemberSet) {
+        this.mSupportMembers = supportMemberSet;
     }
 
     @Override
@@ -46,10 +46,10 @@ public class ApoioRecyclerAdapter extends RecyclerView.Adapter<ApoioRecyclerAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.title.setText(mApoioset.get(position).getTitle());
-        holder.description.setText(mApoioset.get(position).getDescription());
+        holder.title.setText(mSupportMembers.get(position).getTitle());
+        holder.description.setText(mSupportMembers.get(position).getDescription());
 
-        holder.setApoio(mApoioset.get(position));
+        holder.setSupportMember(mSupportMembers.get(position));
         holder.setup();
 
     }
@@ -57,7 +57,7 @@ public class ApoioRecyclerAdapter extends RecyclerView.Adapter<ApoioRecyclerAdap
 
     @Override
     public int getItemCount() {
-        return mApoioset.size();
+        return mSupportMembers.size();
     }
 
 
@@ -68,7 +68,7 @@ public class ApoioRecyclerAdapter extends RecyclerView.Adapter<ApoioRecyclerAdap
         TextView description;
         CircleImageView ivLogo;
 
-        Apoio apoio;
+        SupportMember supportMember;
 
 
         public ViewHolder(View itemView) {
@@ -85,7 +85,7 @@ public class ApoioRecyclerAdapter extends RecyclerView.Adapter<ApoioRecyclerAdap
 
 
 
-            if (getApoio().getType() == 2){
+            if (getSupportMember().getType() == 2){
 
                 Context context = ivLogo.getContext();
                 ivLogo.setLayoutParams(new LinearLayout.LayoutParams(context.getResources().getDimensionPixelSize(R.dimen.rounded_image), context.getResources().getDimensionPixelSize(R.dimen.rounded_image)));
@@ -102,7 +102,7 @@ public class ApoioRecyclerAdapter extends RecyclerView.Adapter<ApoioRecyclerAdap
         private Bitmap setLogo() {
             Base64Parser parser = new Base64Parser();
 
-            return parser.parseToBitmap(getApoio().getLogo());
+            return parser.parseToBitmap(getSupportMember().getLogo());
         }
 
         private View.OnClickListener openSite() {
@@ -110,7 +110,7 @@ public class ApoioRecyclerAdapter extends RecyclerView.Adapter<ApoioRecyclerAdap
                 @Override
                 public void onClick(View v) {
 
-                    Uri uri = Uri.parse(getApoio().getSite());
+                    Uri uri = Uri.parse(getSupportMember().getSite());
 
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     v.getContext().startActivity(intent);
@@ -118,12 +118,12 @@ public class ApoioRecyclerAdapter extends RecyclerView.Adapter<ApoioRecyclerAdap
             };
         }
 
-        public Apoio getApoio() {
-            return apoio;
+        public SupportMember getSupportMember() {
+            return supportMember;
         }
 
-        public void setApoio(Apoio apoio) {
-            this.apoio = apoio;
+        public void setSupportMember(SupportMember supportMember) {
+            this.supportMember = supportMember;
         }
     }
 }

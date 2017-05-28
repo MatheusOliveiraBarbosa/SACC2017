@@ -4,7 +4,7 @@
     <item
         android:id="@+id/action_sacc"
         android:enabled="true"
-        android:icon="@mipmap/ic_computer_black_24dp"
+        android:icon="@mipmap/saccwhite"
         android:title="@string/opt1_VSACC"
         app:showAsAction="ifRoom" />
     <item

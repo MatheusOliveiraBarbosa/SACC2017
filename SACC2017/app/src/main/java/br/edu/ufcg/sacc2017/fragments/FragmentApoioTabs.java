@@ -32,7 +32,7 @@ public class FragmentApoioTabs extends Fragment {
                              Bundle savedInstanceState) {
 
         tabHostProgramacao = new FragmentTabHost(getActivity());
-        tabHostProgramacao.setup(getActivity(), getChildFragmentManager(), R.id.rl_programacao_container);
+        tabHostProgramacao.setup(getActivity(), getChildFragmentManager(), R.id.rl_apoio_container);
 
         tabHostProgramacao.addTab(tabHostProgramacao.newTabSpec("fragment_apoio").setIndicator("Apoio"), FragmentApoio.class, null);
         tabHostProgramacao.addTab(tabHostProgramacao.newTabSpec("fragment_equipe").setIndicator("Equipe"), FragmentEquipe.class, null);

@@ -3,6 +3,7 @@ package br.edu.ufcg.sacc2017.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -18,8 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.edu.ufcg.sacc2017.R;
-import br.edu.ufcg.sacc2017.adapter.ApoioRecyclerAdapter;
-import br.edu.ufcg.sacc2017.model.Apoio;
+import br.edu.ufcg.sacc2017.adapter.SupportRecyclerAdapter;
+import br.edu.ufcg.sacc2017.adapter.TeamRecyclerAdapter;
+import br.edu.ufcg.sacc2017.model.SupportMember;
+import br.edu.ufcg.sacc2017.model.TeamMember;
 import br.edu.ufcg.sacc2017.util.JSONRawReader;
 
 /**
@@ -32,18 +35,6 @@ public class FragmentEquipe extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG = "FragmentApoio";
-
-    private String[] listName = {"UFCG", "TFG", "Red Hat", "GuardiansDSC", "PET Computação", "SPLAB"};
-    private String[] listDescription = {"Universidade Federal de Campina Grande",
-    "A TFG é a maior desenvolvedora de games mobile da América Latina.",
-    "A Red Hat é o principal fornecedor mundial de soluções de software de open source.",
-    "Adicionar Descrição GuardiansDSC",
-    "Adicionar Descrição PET Computação",
-    "Tem como missão promover o desenvolvimento do estado-da-arte na teoria e prática da Engenharia de Software."};
-
-    private int[] listDrawable= {(R.drawable.ufcg), (R.drawable.tfg), (R.drawable.redhat), (R.drawable.guardians), (R.drawable.pet), (R.drawable.splab) };
-
-
 
     public static FragmentEquipe newInstance() {
         FragmentEquipe fragment = new FragmentEquipe();
@@ -60,11 +51,13 @@ public class FragmentEquipe extends Fragment {
                              Bundle savedInstanceState) {
 
         mRecyclerView = new RecyclerView(getActivity());
+
+
         mRecyclerView.findViewById(R.id.reclycer_view);
         mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getActivity());
+        mLayoutManager = new GridLayoutManager(getActivity(), 2);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new ApoioRecyclerAdapter(getDataSet());
+        mAdapter = new TeamRecyclerAdapter(getDataSet());
         mRecyclerView.setAdapter(mAdapter);
 
         return mRecyclerView;
@@ -75,40 +68,38 @@ public class FragmentEquipe extends Fragment {
         super.onResume();
     }
 
-    private List<Apoio> getDataSet() {
+    private List<TeamMember> getDataSet() {
 
         JSONRawReader reader = new JSONRawReader(getActivity());
 
-        List<Apoio> apoios = new ArrayList<>();
+        List<TeamMember> teamMembers = new ArrayList<>();
 
         try {
-            JSONArray dados = reader.getJSONArrayFromRaw(R.raw.apoio);
-            Log.i("Apoio", dados.toString());
+            JSONArray dados = reader.getJSONArrayFromRaw(R.raw.equipe);
 
             if (dados != null) {
                 int len = dados.length();
                 for (int i=0;i<len;i++){
 
-                    Apoio apoio = new Apoio();
+                    TeamMember teamMember = new TeamMember();
 
-                    apoio.setDescription((String) dados.getJSONObject(i).get("descricao"));
-                    apoio.setTitle((String) dados.getJSONObject(i).get("sigla"));
-                    apoio.setSite((String) dados.getJSONObject(i).get("site"));
-                    apoio.setType((int) dados.getJSONObject(i).get("tipo"));
-                    apoio.setLogo((String) dados.getJSONObject(i).get("logo"));
+                    teamMember.setDescription((String) dados.getJSONObject(i).get("descricao"));
+                    teamMember.setName((String) dados.getJSONObject(i).get("nome"));
+                    teamMember.setRole((String) dados.getJSONObject(i).get("papel"));
+                    teamMember.setPhoto((String) dados.getJSONObject(i).get("foto"));
 
-                    apoios.add(apoio);
+                    teamMembers.add(teamMember);
                 }
             }
 
 
             } catch (IOException e) {
-            Log.e("APOIO", e.getMessage());
+            Log.e("TIME", e.getMessage());
         } catch (JSONException e) {
-            Log.e("APOIO", e.getMessage());
+            Log.e("TIME", e.getMessage());
         }
 
-        return apoios;
+        return teamMembers;
     }
 
 
