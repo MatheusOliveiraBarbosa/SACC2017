@@ -26,7 +26,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class SupportRecyclerAdapter extends RecyclerView.Adapter<SupportRecyclerAdapter.ViewHolder> {
 
     private List<SupportMember> mSupportMembers;
-    private static RecyclerViewAdapter.MyClickListener myClickListener;
 
     ViewHolder mViewHolder;
 
