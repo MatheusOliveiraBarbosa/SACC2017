@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017.fragments;
+package br.com.ufcg.sacc2017.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,30 +17,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.edu.ufcg.sacc2017.R;
-import br.edu.ufcg.sacc2017.adapter.ScheduleRecyclerAdapter;
-import br.edu.ufcg.sacc2017.model.Schedule;
-import br.edu.ufcg.sacc2017.util.JSONRawReader;
+import br.com.ufcg.sacc2017.R;
+import br.com.ufcg.sacc2017.adapter.ScheduleRecyclerAdapter;
+import br.com.ufcg.sacc2017.model.Schedule;
+import br.com.ufcg.sacc2017.util.JSONRawReader;
 
 /**
  * Created by mathe on 25/05/2017.
  */
 
-public class FragmentProgramacaoDia03 extends Fragment {
+public class FragmentProgramacaoDia01 extends Fragment {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private static String LOG_TAG_DIA3 = "FragmentProgramacaoDia03";
+    private static String LOG_TAG1 = "FragmentProgramacaoDia01";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_programacao_dia03,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_programacao_dia01,container,false);
 
         mRecyclerView = new RecyclerView(getActivity());
-        mRecyclerView.findViewById(R.id.reclycer_view_3);
+        mRecyclerView.findViewById(R.id.reclycer_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -64,7 +64,7 @@ public class FragmentProgramacaoDia03 extends Fragment {
         List<Schedule> schedules = new ArrayList<>();
 
         try {
-            JSONArray dados = reader.getJSONArrayFromRaw(R.raw.programacao_dia03);
+            JSONArray dados = reader.getJSONArrayFromRaw(R.raw.programacao_dia01);
 
             if (dados != null) {
                 int len = dados.length();
@@ -93,4 +93,5 @@ public class FragmentProgramacaoDia03 extends Fragment {
         return schedules;
 
     }
+
 }

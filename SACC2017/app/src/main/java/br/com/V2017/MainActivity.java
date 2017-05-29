@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017;
+package br.com.ufcg.sacc2017;
 
 
 import android.support.annotation.NonNull;
@@ -6,17 +6,14 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TabHost;
 
-import br.edu.ufcg.sacc2017.fragments.FragmentApoio;
-import br.edu.ufcg.sacc2017.fragments.FragmentApoioTabs;
-import br.edu.ufcg.sacc2017.fragments.FragmentProgramacao;
-import br.edu.ufcg.sacc2017.fragments.FragmentSACC;
+import br.com.ufcg.sacc2017.fragments.FragmentApoioTabs;
+import br.com.ufcg.sacc2017.fragments.FragmentProgramacao;
+import br.com.ufcg.sacc2017.fragments.FragmentSACC;
 
 
 public class MainActivity extends FragmentActivity {

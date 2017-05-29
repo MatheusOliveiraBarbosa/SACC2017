@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017.model;
+package br.com.ufcg.sacc2017.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

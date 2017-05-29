@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017.fragments;
+package br.com.ufcg.sacc2017.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,10 +17,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.edu.ufcg.sacc2017.R;
-import br.edu.ufcg.sacc2017.adapter.ScheduleRecyclerAdapter;
-import br.edu.ufcg.sacc2017.model.Schedule;
-import br.edu.ufcg.sacc2017.util.JSONRawReader;
+import br.com.ufcg.sacc2017.R;
+import br.com.ufcg.sacc2017.adapter.ScheduleRecyclerAdapter;
+import br.com.ufcg.sacc2017.model.Schedule;
+import br.com.ufcg.sacc2017.util.JSONRawReader;
 
 /**
  * Created by mathe on 25/05/2017.

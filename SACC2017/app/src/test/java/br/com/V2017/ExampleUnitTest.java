@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017;
+package br.com.ufcg.sacc2017;
 
 import org.junit.Test;
 

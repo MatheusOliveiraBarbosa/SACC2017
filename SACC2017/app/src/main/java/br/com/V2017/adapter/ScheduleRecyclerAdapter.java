@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017.adapter;
+package br.com.ufcg.sacc2017.adapter;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -9,14 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
 
-import br.edu.ufcg.sacc2017.R;
-import br.edu.ufcg.sacc2017.model.Schedule;
-import br.edu.ufcg.sacc2017.util.Base64Parser;
+import br.com.ufcg.sacc2017.R;
+import br.com.ufcg.sacc2017.model.Schedule;
+import br.com.ufcg.sacc2017.util.Base64Parser;
 
 /**
  * Created by mathe on 28/05/2017.

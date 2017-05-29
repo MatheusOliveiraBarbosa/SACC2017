@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017.adapter;
+package br.com.ufcg.sacc2017.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import br.edu.ufcg.sacc2017.R;
-import br.edu.ufcg.sacc2017.model.SupportMember;
-import br.edu.ufcg.sacc2017.util.Base64Parser;
+import br.com.ufcg.sacc2017.R;
+import br.com.ufcg.sacc2017.model.SupportMember;
+import br.com.ufcg.sacc2017.util.Base64Parser;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**

@@ -1,4 +1,4 @@
-package br.edu.ufcg.sacc2017.fragments;
+package br.com.ufcg.sacc2017.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import br.edu.ufcg.sacc2017.R;
+import br.com.ufcg.sacc2017.R;
 
 /**
  * Created by mathe on 25/05/2017.

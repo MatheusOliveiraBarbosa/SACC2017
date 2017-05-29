@@ -1,20 +1,13 @@
-package br.edu.ufcg.sacc2017.fragments;
+package br.com.ufcg.sacc2017.fragments;
 
-import android.content.Context;
-import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TabHost;
 
-import br.edu.ufcg.sacc2017.R;
+import br.com.ufcg.sacc2017.R;
 
 /**
  * Created by mathe on 25/05/2017.

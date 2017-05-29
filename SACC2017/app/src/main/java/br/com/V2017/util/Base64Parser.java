@@ -1,10 +1,8 @@
-package br.edu.ufcg.sacc2017.util;
+package br.com.ufcg.sacc2017.util;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
-import android.util.Log;
 
 /**
  * Created by WitaloCarlos on 27/05/2017.

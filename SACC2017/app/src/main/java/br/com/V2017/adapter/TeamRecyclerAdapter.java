@@ -1,21 +1,17 @@
-package br.edu.ufcg.sacc2017.adapter;
+package br.com.ufcg.sacc2017.adapter;
 
-import android.content.Context;
 import android.graphics.Bitmap;
-import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
 
-import br.edu.ufcg.sacc2017.R;
-import br.edu.ufcg.sacc2017.model.SupportMember;
-import br.edu.ufcg.sacc2017.model.TeamMember;
-import br.edu.ufcg.sacc2017.util.Base64Parser;
+import br.com.ufcg.sacc2017.R;
+import br.com.ufcg.sacc2017.model.TeamMember;
+import br.com.ufcg.sacc2017.util.Base64Parser;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**

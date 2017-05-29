@@ -4,7 +4,7 @@
     android:id="@+id/rl_programacao_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.edu.ufcg.sacc2017.fragments.FragmentProgramacao">
+    tools:context="br.com.ufcg.sacc2017.fragments.FragmentProgramacao">
 
     <TabWidget
         android:id="@android:id/tabs"
