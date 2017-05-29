@@ -10,17 +10,32 @@ import android.os.Parcelable;
 public class Schedule implements Parcelable {
 
     private String name;
+    private String time;
+    private String presenter;
     private String description;
     private String logo;
     private String site;
 
     public Schedule(){}
 
-    protected Schedule (Parcel in){
-        this.name = in.readString();
-        this.description = in.readString();
-        this.logo = in.readString();
-        this.site = in.readString();
+
+    protected Schedule(Parcel in) {
+        name = in.readString();
+        time = in.readString();
+        presenter = in.readString();
+        description = in.readString();
+        logo = in.readString();
+        site = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(time);
+        dest.writeString(presenter);
+        dest.writeString(description);
+        dest.writeString(logo);
+        dest.writeString(site);
     }
 
     @Override
@@ -28,18 +43,10 @@ public class Schedule implements Parcelable {
         return 0;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.name);
-        dest.writeString(this.description);
-        dest.writeString(this.logo);
-        dest.writeString(this.site);
-    }
-
     public static final Creator<Schedule> CREATOR = new Creator<Schedule>() {
         @Override
-        public Schedule createFromParcel(Parcel source) {
-            return new Schedule(source);
+        public Schedule createFromParcel(Parcel in) {
+            return new Schedule(in);
         }
 
         @Override
@@ -78,5 +85,21 @@ public class Schedule implements Parcelable {
 
     public void setSite(String site) {
         this.site = site;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getPresenter() {
+        return presenter;
+    }
+
+    public void setPresenter(String presenter) {
+        this.presenter = presenter;
     }
 }

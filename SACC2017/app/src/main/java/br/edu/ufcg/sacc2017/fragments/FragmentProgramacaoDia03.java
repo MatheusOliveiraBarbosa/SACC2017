@@ -40,7 +40,7 @@ public class FragmentProgramacaoDia03 extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_programacao_dia03,container,false);
 
         mRecyclerView = new RecyclerView(getActivity());
-        mRecyclerView.findViewById(R.id.reclycer_view);
+        mRecyclerView.findViewById(R.id.reclycer_view_3);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -74,8 +74,10 @@ public class FragmentProgramacaoDia03 extends Fragment {
 
                     schedule.setDescription((String) dados.getJSONObject(i).get("descricao"));
                     schedule.setName((String) dados.getJSONObject(i).get("titulo"));
+                    schedule.setTime((String) dados.getJSONObject(i).get("hora"));
                     schedule.setSite((String) dados.getJSONObject(i).get("localizacao"));
                     schedule.setLogo((String) dados.getJSONObject(i).get("logo"));
+                    schedule.setPresenter((String) dados.getJSONObject(i).get("palestrante"));
 
                     schedules.add(schedule);
                 }

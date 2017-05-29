@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -45,6 +46,7 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
     public void onBindViewHolder(ScheduleRecyclerAdapter.ViewHolder holder, int position) {
         holder.title.setText(mSchedules.get(position).getName());
         holder.description.setText(mSchedules.get(position).getDescription());
+        holder.time.setText(mSchedules.get(position).getTime());
 
         holder.setSchedule(mSchedules.get(position));
         holder.setup();
@@ -60,10 +62,13 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        RelativeLayout container;
+        LinearLayout container;
         TextView title;
+        TextView time;
+        TextView presenter;
         TextView description;
         ImageView ivLogo;
+        LinearLayout llPresenter;
 
         Schedule schedule;
 
@@ -71,9 +76,12 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
         public ViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.tv_title);
+            time = (TextView) itemView.findViewById(R.id.tv_time);
+            presenter = (TextView) itemView.findViewById(R.id.tv_presenter);
             description = (TextView) itemView.findViewById(R.id.tv_description);
             ivLogo = (ImageView) itemView.findViewById(R.id.iv_card_logo);
-            container = (RelativeLayout) itemView.findViewById(R.id.rl_schedule_container);
+            container = (LinearLayout) itemView.findViewById(R.id.rl_schedule_container);
+            llPresenter = (LinearLayout) itemView.findViewById(R.id.ll_presenter);
         }
 
         public void setup(){
@@ -85,6 +93,12 @@ public class ScheduleRecyclerAdapter extends RecyclerView.Adapter<ScheduleRecycl
                 ivLogo.setImageResource(R.drawable.ufcg);
             } else {
                 ivLogo.setImageBitmap(setLogo());
+            }
+
+            if (getSchedule().getPresenter().equals("") || getSchedule().getPresenter() == null){
+                llPresenter.setVisibility(View.GONE);
+            } else {
+                presenter.setText(getSchedule().getPresenter());
             }
 
 
