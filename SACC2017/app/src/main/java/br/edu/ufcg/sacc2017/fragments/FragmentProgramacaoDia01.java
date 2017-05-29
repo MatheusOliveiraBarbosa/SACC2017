@@ -74,8 +74,10 @@ public class FragmentProgramacaoDia01 extends Fragment {
 
                     schedule.setDescription((String) dados.getJSONObject(i).get("descricao"));
                     schedule.setName((String) dados.getJSONObject(i).get("titulo"));
+                    schedule.setTime((String) dados.getJSONObject(i).get("hora"));
                     schedule.setSite((String) dados.getJSONObject(i).get("localizacao"));
                     schedule.setLogo((String) dados.getJSONObject(i).get("logo"));
+                    schedule.setPresenter((String) dados.getJSONObject(i).get("palestrante"));
 
                     schedules.add(schedule);
                 }
